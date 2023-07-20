@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import SearchBar from './component/SearchBar';
+import Saves from './component/Saves';
+import Home from './component/Home';
+import Cornrecepie from './component/Compo/Cornrecepie';
+import Signin from './component/Compo/Signin';
+import Signup from './component/Compo/Signup';
+import FinalLogin from './component/Compo/FinalLogin';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+ 
+     <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/Searchbar' element={<SearchBar/>}/>
+      <Route path='/Saves' element={<Saves/>}/>
+      <Route path='/Signin' element={<Signin/>}/>
+      <Route path='/Signup' element={<Signup/>}/>
+      <Route path='/Cornrecepie' element={<Cornrecepie/>}/>
+      <Route path='/FinalLogin' element={<FinalLogin/>}/>
+     </Routes>
+
+
+    </>
   );
 }
 
